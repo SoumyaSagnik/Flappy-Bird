@@ -7,6 +7,7 @@ import {
 } from "./pipe.js";
 
 document.addEventListener("keypress", handleStart, { once: true });
+document.addEventListener("touchstart", handleStart, { once: true });
 
 const title = document.querySelector("[data-title]");
 const subtitle = document.querySelector("[data-subtitle]");
@@ -50,6 +51,7 @@ function handleLose() {
     subtitle.classList.remove("hide");
     subtitle.textContent = `Score: ${getPassedPipesCount()}`;
     document.addEventListener("keypress", handleStart, { once: true });
+    document.addEventListener("touchstart", handleStart, { once: true });
   }, 400);
 }
 
