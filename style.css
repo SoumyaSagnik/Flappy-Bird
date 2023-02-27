@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tilt Prism', cursive;
+    overflow: hidden;
+    background-color: rgba(19, 188, 81, 0.6);
+}
+
+.title {
+    z-index: 10;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.subtitle {
+    margin-top: .5rem;
+}
+
+.bird {
+    --bird-size: 50px;
+    --bird-top: -1000;
+    position: absolute;
+    width: var(--bird-size);
+    height: var(--bird-size);
+    left: var(--bird-size);
+    top: calc(var(--bird-top) * 1px);
+    border-radius: 50%;
+}
+
+.hide {
+    display: none;
+}
+
+.pipe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: calc(var(--pipe-width) * 1px);
+    left: calc(var(--pipe-left) * 1px);
+}
+
+.pipe>.segment {
+    position: absolute;
+    width: 100%;
+    background-color: rgb(124, 252, 105)
+}
+
+.pipe>.top {
+    top: 0;
+    bottom: calc(var(--hole-top) * 1px);
+}
+
+.pipe>.bottom {
+    bottom: 0;
+    top: calc(100vh - (var(--hole-top) * 1px) + calc(var(--hole-height) * 1px));
+}
+
+.bird img {
+    width: 100%;
+    height: 100%;
+}
