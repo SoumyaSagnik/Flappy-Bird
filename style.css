@@ -21,6 +21,7 @@ body {
     inset: 0;
     margin: 0;
     flex-direction: column;
+    font-size: 5vmin;
 }
 
 .subtitle {
@@ -69,4 +70,11 @@ body {
 .bird img {
     width: 100%;
     height: 100%;
+}
+
+#game {
+    text-align: center;
+    font-size: 15vmin;
+    color: yellow;
+    text-shadow: 0 0 .2rem rgba(0, 0, 0, .5);
 }

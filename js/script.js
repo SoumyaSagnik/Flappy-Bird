@@ -10,11 +10,13 @@ document.addEventListener("keypress", handleStart, { once: true });
 
 const title = document.querySelector("[data-title]");
 const subtitle = document.querySelector("[data-subtitle]");
+const gameName = document.querySelector("#game");
 
 let lastTime;
 
 function handleStart() {
   title.classList.add("hide");
+  gameName.classList.add("hide");
   setupBird();
   setupPipes();
   lastTime = null;
